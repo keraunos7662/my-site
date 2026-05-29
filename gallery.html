@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>gorty | Галерея</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="menu">
+        <a href="index.html" class="button">Главная</a>
+        <a href="catalog.html" class="button">Афиша</a>
+        <a href="gallery.html" class="button">Галерея</a>
+        <a href="contacts.html" class="button">Контакты</a> </div>
+
+    <div class="container">
+        <h1>Галерея событий</h1>
+        <img src="https://optim.tildacdn.com/tild3633-6331-4536-a531-396534666432/-/format/webp/img00020.JPG.webp" alt="Концерт">
+        <button class="button" onclick="showGallery()">Показать больше фото</button>
+        <div id="hidden-gallery">
+            <div class="gallery-grid">
+                <img src="https://optim.tildacdn.com/tild6637-3930-4662-b133-336539386137/-/format/webp/Image00016.JPG.webp" alt="Стадион">
+                <img src="https://optim.tildacdn.com/tild3833-3333-4761-b939-303161393063/-/format/webp/Image00005.jpg.webp" alt="Сцена">
+                <img src="https://optim.tildacdn.com/tild3461-3164-4433-a334-366330393633/-/format/webp/Image00045.JPG.webp" alt="Концерт">
+                <img src="https://optim.tildacdn.com/tild6230-3439-4466-a462-323864363064/-/format/webp/_WED0393_resized.jpg.webp" alt="Концерт">
+                <img src="https://optim.tildacdn.com/tild3463-6365-4335-b530-656265363536/-/format/webp/img00010.jpg.webp" alt="Концерт">
+                <img src="https://optim.tildacdn.com/tild3864-6136-4531-b164-633735353633/-/format/webp/Madk1d_071.jpg.webp" alt="Концерт">
+            </div>
+        </div>
+        <h2>Видео-отчет VK</h2>
+        <iframe src="https://vk.com/video_ext.php?oid=-53123474&id=456240092&hd=4" 
+                width="100%" height="450" allowfullscreen></iframe>
+    </div>
+    <script>
+        function showGallery() {
+            var gallery = document.getElementById("hidden-gallery");
+            if (gallery.style.display === "none") {
+                gallery.style.display = "block"; // Показывает галерею
+            } else {
+                gallery.style.display = "none";  // Скрывает обратно (по желанию)
+            }
+        }
+    </script>
+</body>
+</html>
