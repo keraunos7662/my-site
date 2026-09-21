@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GHG | Медиа Галерея</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="header">
+        <div class="logo">GHG AGENCY</div>
+        <nav class="menu">
+            <a href="index.html">Главная</a>
+            <a href="catalog.html">Афиша</a>
+            <a href="gallery.html" class="active">Галерея</a>
+            <a href="contacts.html">Контакты</a>
+        </nav>
+    </header>
+
+    <main class="container">
+        <h1>Видео и фото с прошедших шоу</h1>
+
+        <section class="video-container">
+            <iframe src="https://vkvideo.ru/video_ext.php?oid=-53123474&id=456240092&hd=4&autoplay=1" width="100%" height="600" allow="autoplay; encrypted-media; fullscreen; picture-in-picture; screen-wake-lock;" frameborder="0" allowfullscreen></iframe>
+        </section>
+
+        <h2>Фотоотчет</h2>
+        <div class="gallery-grid">
+            <img src='https://optim.tildacdn.com/tild3732-3439-4736-a561-336261646533/-/format/webp/Image00035.jpg.webp' alt="Концерт 1">
+            <img src="https://optim.tildacdn.com/tild3864-6136-4531-b164-633735353633/-/format/webp/Madk1d_071.jpg.webp" alt="Концерт 2">
+            <img src="https://optim.tildacdn.com/tild3139-6130-4166-a161-343039373430/-/format/webp/img00019.JPG.webp" alt="Концерт 3">
+        </div>
+
+        <div id="hidden-gallery">
+            <div class="gallery-grid">
+                <img src="https://optim.tildacdn.com/tild6134-3831-4663-b338-316463373464/-/format/webp/DSC05991-ARW.jpg.webp" alt="Концерт 4">
+                <img src="https://optim.tildacdn.com/tild3766-3163-4439-a333-316535643638/-/format/webp/img00046.JPG.webp" alt="Концерт 5">
+                <img src="https://optim.tildacdn.com/tild6361-3764-4438-a138-313864356661/-/format/webp/_WED1065_resized.jpg.webp" alt="Концерт 6">
+            </div>
+        </div>
+
+        <button class="button" onclick="showGallery()">Показать больше фото</button>
+    </main>
+
+    <script>
+    function showGallery() {
+        var gallery = document.getElementById("hidden-gallery");
+        if (gallery.style.display === "none" || gallery.style.display === "") {
+            gallery.style.display = "block";
+            event.target.innerText = "Скрыть фото";
+        } else {
+            gallery.style.display = "none";
+            event.target.innerText = "Показать больше фото";
+        }
+    }
+    </script>
+</body>
+</html>
